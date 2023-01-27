@@ -114,7 +114,7 @@ public class JMusicBot
 
                         new OnlineCmd(bot),
                         
-                        new LyricsCmd(bot),
+//                        new LyricsCmd(bot),
                         new NowplayingCmd(bot),
                         new PlayCmd(bot),
                         new PlaylistsCmd(bot),
