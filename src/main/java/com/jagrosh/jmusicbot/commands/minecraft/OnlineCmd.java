@@ -48,9 +48,9 @@ public class OnlineCmd extends OwnerCommand
         MinecraftServerStatusApiResponse serverStatus = minecraftServerApiClient.getServerStatus();
 
         if (Objects.equals(serverStatus.getPlayers().getNow(), 0)) {
-            event.reply("현재 접속 중인 사람이 없어요 ㅠㅠ 먼저 들어가보는 건 어때요?");
+            event.reply("현재 접속 중인 사람이 없어요 ㅠㅠ 먼저 들어가보시는 건 어때요?");
         } else if (serverStatus.getPlayers().getNow() > 0) {
-            event.reply("현재 %d명이 접속중이에요! 같이 게임 하실래요?");
+            event.reply(String.format("현재 %d명이 접속중이에요! 같이 게임 하실래요?", serverStatus.getPlayers().getNow()));
         }
     }
 }
