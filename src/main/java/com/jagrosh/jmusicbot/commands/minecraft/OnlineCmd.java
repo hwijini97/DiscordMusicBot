@@ -17,7 +17,7 @@ package com.jagrosh.jmusicbot.commands.minecraft;
 
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jmusicbot.Bot;
-import com.jagrosh.jmusicbot.commands.OwnerCommand;
+import com.jagrosh.jmusicbot.commands.MinecraftCommand;
 import com.jagrosh.jmusicbot.domain.model.minecraft.response.MinecraftServerStatusApiResponse;
 import com.jagrosh.jmusicbot.infra.client.MinecraftServerApiClient;
 
@@ -27,7 +27,7 @@ import java.util.Objects;
  *
  * @author John Grosh <john.a.grosh@gmail.com>
  */
-public class OnlineCmd extends OwnerCommand
+public class OnlineCmd extends MinecraftCommand
 {
     private final Bot bot;
     private final MinecraftServerApiClient minecraftServerApiClient;
