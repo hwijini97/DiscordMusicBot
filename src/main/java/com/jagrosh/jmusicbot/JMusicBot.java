@@ -23,6 +23,7 @@ import com.jagrosh.jmusicbot.commands.admin.*;
 import com.jagrosh.jmusicbot.commands.dj.*;
 import com.jagrosh.jmusicbot.commands.general.SettingsCmd;
 import com.jagrosh.jmusicbot.commands.minecraft.OnlineCmd;
+import com.jagrosh.jmusicbot.commands.minecraft.ServerInfoCmd;
 import com.jagrosh.jmusicbot.commands.music.*;
 import com.jagrosh.jmusicbot.commands.owner.*;
 import com.jagrosh.jmusicbot.entities.Prompt;
@@ -113,6 +114,7 @@ public class JMusicBot
                         new SettingsCmd(bot),
 
                         new OnlineCmd(bot),
+                        new ServerInfoCmd(bot),
                         
 //                        new LyricsCmd(bot),
                         new NowplayingCmd(bot),
