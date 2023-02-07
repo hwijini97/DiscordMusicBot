@@ -26,6 +26,5 @@ public abstract class MinecraftCommand extends Command
     public MinecraftCommand()
     {
         this.category = new Category("Minecraft");
-        this.ownerCommand = true;
     }
 }
