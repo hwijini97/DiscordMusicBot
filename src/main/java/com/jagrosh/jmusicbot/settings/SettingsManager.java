@@ -51,7 +51,7 @@ public class SettingsManager implements GuildSettingsManager<Settings>
                         o.has("text_channel_id") ? o.getString("text_channel_id")            : null,
                         o.has("voice_channel_id")? o.getString("voice_channel_id")           : null,
                         o.has("dj_role_id")      ? o.getString("dj_role_id")                 : null,
-                        o.has("volume")          ? o.getInt("volume")                        : 100,
+                        o.has("volume")          ? o.getInt("volume")                        : 30,
                         o.has("default_playlist")? o.getString("default_playlist")           : null,
                         o.has("repeat_mode")     ? o.getEnum(RepeatMode.class, "repeat_mode"): RepeatMode.OFF,
                         o.has("prefix")          ? o.getString("prefix")                     : null,
@@ -81,7 +81,7 @@ public class SettingsManager implements GuildSettingsManager<Settings>
     
     private Settings createDefaultSettings()
     {
-        return new Settings(this, 0, 0, 0, 100, null, RepeatMode.OFF, null, SKIP_RATIO);
+        return new Settings(this, 0, 0, 0, 30, null, RepeatMode.OFF, null, SKIP_RATIO);
     }
     
     protected void writeSettings()
@@ -96,7 +96,7 @@ public class SettingsManager implements GuildSettingsManager<Settings>
                 o.put("voice_channel_id", Long.toString(s.voiceId));
             if(s.roleId!=0)
                 o.put("dj_role_id", Long.toString(s.roleId));
-            if(s.getVolume()!=100)
+            if(s.getVolume()!=30)
                 o.put("volume",s.getVolume());
             if(s.getDefaultPlaylist() != null)
                 o.put("default_playlist", s.getDefaultPlaylist());
