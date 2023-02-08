@@ -40,6 +40,8 @@ public class VolumeCmd extends DJCommand
     @Override
     public void doCommand(CommandEvent event)
     {
+        event.reply("현재 오류로 인해 volume 명령어를 지원하지 않아요 ㅠㅠ 죄송합니다");
+        /*
         AudioHandler handler = (AudioHandler)event.getGuild().getAudioManager().getSendingHandler();
         Settings settings = event.getClient().getSettingsFor(event.getGuild());
         int volume = handler.getPlayer().getVolume();
@@ -64,6 +66,7 @@ public class VolumeCmd extends DJCommand
                 event.reply(FormatUtil.volumeIcon(nvolume)+" Volume changed from `"+volume+"` to `"+nvolume+"`");
             }
         }
+         */
     }
     
 }
